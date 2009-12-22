@@ -1,0 +1,24 @@
+farmHost:
+  value: localhost
+  hint: Hostname for principal node in the farm
+runLocally:
+    value: true
+    hint: whether run locally or in the farm
+seleniumPort:
+  value: 4444
+  hint: Selenium Port
+seleniumHost:
+  value: localhost
+  hint: Host where selenium is running and is going to be used
+browser:
+  value: chrome /Users/user/Firefox.app/Contents/MacOS/firefox-bin
+  hint: Browser to be used by selenium to run tests
+url:
+  value: http://localhost:3000/store/
+  hint: URL to run test against to
+timeout:
+  value: 1000000
+  hint: Timeout for page to load
+firefoxProfile:
+  value: /Users/user/crowdint/repos/modcloth-autotest/firefoxProfile
+  hint: To avoid ssl issues using firefox, we need to specify our profile

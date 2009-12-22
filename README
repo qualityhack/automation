@@ -1,0 +1,4 @@
+gems:
+  Selenium    <- Capital S
+  selenium-client
+  rspecs
