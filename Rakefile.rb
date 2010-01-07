@@ -16,7 +16,7 @@ task :stop_server do
   manager.stop
 end
 
-Spec::Rake::SpecTask.new('modcloth_storefront_tests') do |t|
+Spec::Rake::SpecTask.new('crowdportal_storefront_tests') do |t|
   t.spec_files = FileList['tests/storefront/*.rb']
 end
 
@@ -24,7 +24,7 @@ task :acceptance_cycle do
   print "Here"
   begin
     Rake::Task['start_server'].invoke
-    Rake::Task['modcloth_storefront_tests'].invoke
+    Rake::Task['crowdportal_storefront_tests'].invoke
   ensure
     Rake::Task['stop_server'].invoke
   end

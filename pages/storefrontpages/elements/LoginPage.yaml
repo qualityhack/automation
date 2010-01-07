@@ -1,4 +1,3 @@
-title: Mod Retro Indie Clothing & Vintage Clothes
-emailInput: email
-pwdInput: password
-submitButton: //div[@id='login']/form/div[2]/input
+user_name_input: login
+password_input: password
+login_button: //input[@type='image']

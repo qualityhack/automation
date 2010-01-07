@@ -10,13 +10,29 @@ class CrowdDataElements
    # Builds magic functions to handle elements
    # @params hash key => value
    ##
-  def initialize(elements)
+ def initialize(elements)
+    @elements = elements
     elements.each do |key, value|
-      eval (%{
-        def #{key}
-          return #{value.dump}
-        end
-      })
+      if (value.class.to_s == "Array" || value.class.to_s == "Hash")
+        eval (%{
+          def #{key}
+            return @elements[:#{key}]
+
+          end
+        })
+      elsif value.class.to_s == 'Fixnum'
+        eval(%{
+          def #{key}
+            return #{value}
+          end
+        })
+      else
+        eval(%{
+          def #{key}
+            return #{value.dump}
+          end
+        })
+      end
     end
   end
 end

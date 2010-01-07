@@ -11,10 +11,10 @@ seleniumHost:
   value: localhost
   hint: Host where selenium is running and is going to be used
 browser:
-  value: chrome /Users/user/Firefox.app/Contents/MacOS/firefox-bin
+  value: chrome /opt/firefox/firefox-bin
   hint: Browser to be used by selenium to run tests
 url:
-  value: http://localhost:3000/store/
+  value: http://control.crowdint.com
   hint: URL to run test against to
 timeout:
   value: 1000000

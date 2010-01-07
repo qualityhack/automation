@@ -8,16 +8,16 @@ module Storefrontpages
       super(browser)
     end
   
-    def emailInput
-      browser.text_field(:id, @elements.emailInput)
+    def usernameInput
+      browser.text_field(:id, @elements.user_name_input)
     end
   
-    def pwdInput
-      browser.text_field(:id, @elements.pwdInput)
+    def passwordInput
+      browser.text_field(:id, @elements.password_input)
     end
   
     def loginBtn
-      browser.button(:xpath, @elements.submitButton)
+      browser.button(:xpath, @elements.login_button)
     end
   
   end

@@ -2,8 +2,8 @@
 
 require 'tests/base_test'
 require 'pages/storefrontpages/home_page'
-require 'pages/storefrontpages/top_menu'
 require 'pages/storefrontpages/login_page'
+require 'actions/storefront/user_actions'
 
 module Storefront
   
@@ -12,24 +12,15 @@ module Storefront
    # @author Edwin Cruz (edwin.cruz@crowdint.com)
    ##
   class HomePageTest < BaseTest
-  
+    include UserActions
     ##
      # Test for Home page
      ##
     def test_home_page
-      @testData = @data['test_home_page']
-      homePage = Storefrontpages::HomePage.new(@webpage)
-      topMenu = Storefrontpages::TopMenu.new(@webpage)
-      loginPage = Storefrontpages::LoginPage.new(@webpage)
 
-      assert true, homePage.present?
-      topMenu.signin_link.click
-      assert true, topMenu.present?
-      loginPage.wait_page_load
-      loginPage.emailInput.enter(@testData.email)
-      loginPage.pwdInput.enter(@testData.pwd)
-      loginPage.loginBtn.click
-      homePage.wait_page_load
+      @testData = @data['test_home_page']
+      login_user(@webpage,@testData.username,@testData.password)
+      
     end
   end
 

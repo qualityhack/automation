@@ -1,4 +1,4 @@
 test_home_page:
-    title: Mod Retro Indie Clothing & Vintage Clothes
-    email: admin@modcloth.com
-    pwd: t3mp
+    username: Administrative_ci_user
+    password: 123456
+    title: Welcome to CROWD Interactive
