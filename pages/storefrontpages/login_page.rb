@@ -19,6 +19,10 @@ module Storefrontpages
     def loginBtn
       browser.button(:xpath, @elements.login_button)
     end
+    
+    def logoutBtn
+      browser.button(:xpath, @elements.logout_button)
+    end
   
   end
 

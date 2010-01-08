@@ -20,7 +20,7 @@ module Storefront
 
       @testData = @data['test_home_page']
       login_user(@webpage,@testData.username,@testData.password)
-      
+      logout_user(@webpage)
     end
   end
 

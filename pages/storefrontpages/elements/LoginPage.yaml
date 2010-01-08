@@ -1,3 +1,4 @@
 user_name_input: login
 password_input: password
 login_button: //input[@type='image']
+logout_button : //a[contains(text(),'Logout')]

@@ -15,4 +15,10 @@ module UserActions
     sleep(10)
   end
 
+  def logout_user(webpage)
+    login_page = Storefrontpages::LoginPage.new(webpage)
+    login_page.logoutBtn.click
+    login_page.wait_page_load
+  end
+
 end
